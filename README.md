@@ -1,2 +1,2 @@
-# int-validation
-Abstraction layer to implement validation service
+# Validation Service (Abstract)
+This repository holds all interfaces/classes/traits that you need to make data validation service.

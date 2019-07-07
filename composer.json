@@ -1,0 +1,25 @@
+{
+    "name": "mbrostami/int-validation",
+    "description": "Abstraction layer to implement validation service",
+    "require-dev": {
+        "phpunit/phpunit": "^8.2",
+        "php": "^7.1"
+    },
+    "authors": [
+        {
+            "name": "mbrostami",
+            "email": "mb.rostami.h@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Int\\Validation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Int\\Tests\\": "tests"
+        }
+    }
+}
