@@ -21,6 +21,17 @@ interface ValidatorInterface
     public function getOption(string $optionName);
 
     /**
+     * @param string $validatorName
+     * @return ValidatorInterface
+     */
+    public function setName(string $validatorName): ValidatorInterface;
+
+    /**
+     * @return string
+     */
+    public function getName(): string;
+
+    /**
      * @param mixed $value
      * @return bool
      */

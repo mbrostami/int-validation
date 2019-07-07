@@ -9,16 +9,7 @@ class SimpleValidatorTest extends TestCase
     public function testImplementation()
     {
         $validator = new SimpleValidator();
-        $this->assertTrue($validator->validate('test'));
-    }
-
-    public function testSetOption()
-    {
-        $validator = new SimpleValidator();
-        $validator->setOptions([
-            'test' => false
-        ]);
-        $this->assertFalse($validator->validate('test'));
+        $this->assertTrue($validator->validate('value'));
     }
 
     public function testGetOption()
@@ -28,6 +19,7 @@ class SimpleValidatorTest extends TestCase
             'test' => 'value'
         ]);
         $this->assertEquals('value', $validator->getOption('test'));
+        $this->assertNull($validator->getOption('not_exists'));
     }
 
     public function testGetOptions()

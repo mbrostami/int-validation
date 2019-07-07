@@ -7,6 +7,8 @@ abstract class ValidatorAbstract implements ValidatorInterface
 {
     protected $options;
 
+    protected $name;
+
     public function setOptions(array $options): ValidatorInterface
     {
         $this->options = $options;
@@ -21,6 +23,17 @@ abstract class ValidatorAbstract implements ValidatorInterface
     public function getOption(string $optionName)
     {
         return $this->options[$optionName] ?? null;
+    }
+
+    public function setName(string $validatorName): ValidatorInterface
+    {
+        $this->name = $validatorName;
+        return $this;
+    }
+
+    public function getName(): string
+    {
+        return $this->name ?: get_called_class();
     }
 
     abstract public function validate($value): bool;

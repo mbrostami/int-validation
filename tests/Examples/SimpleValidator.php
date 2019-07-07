@@ -7,6 +7,6 @@ class SimpleValidator extends ValidatorAbstract
 {
     public function validate($value): bool
     {
-        return $this->options['test'] ?? true;
+        return (bool)$value;
     }
 }
